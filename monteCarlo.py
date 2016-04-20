@@ -3,9 +3,7 @@ import math
 import matplotlib.pyplot as plt
 import graphviz
 
-<<<<<<< HEAD
-#March 29 Lecture Exercise
-
+#Visualize a graph
 def get_graphviz_from_adj_mat2(graph_adj_mat):
 	if np.array_equal(np.array(graph_adj_mat), np.transpose(np.array(graph_adj_mat))):
 		graphviz_graph = graphviz.Graph(comment='This is a graph')
@@ -41,11 +39,7 @@ g.format='png'
 g.render('g_graph.gv', view=True)
 
 
-#April 4 Lecture Exercise
-=======
-#Randomly add edges to a graph until it is connected
->>>>>>> origin/master
-
+#The following methods randomly add edges to nodes until they form a connected graph
 def createListOfEdges(k):
 	listOfEdges = []
 	
@@ -95,6 +89,7 @@ def randomly_add_edges(k):	#k is the number of vertices on the graph
 
 	return numAttempts	#Returns number of attempts
 
+#Monte Carlo simulation to determine average number of edges added to a graph with K vertices
 def average_number_of_edges(n, k):	#n is the number of times to loop. K is the number of vertices
 	s = 0.0
 	
@@ -107,13 +102,8 @@ def average_number_of_edges(n, k):	#n is the number of times to loop. K is the n
 		
 	return s/n
 
-<<<<<<< HEAD
 print average_number_of_edges(100, 5)	
 
-
-#April 5 Lecture Exercise
-=======
->>>>>>> origin/master
 
 #Let e(k) be the expected number of directed edges needed to be added to k vertices to make the graph connected.
 #Plot e(k) vs. k for k up to 50
@@ -134,12 +124,6 @@ plt.axis([-.1, points, 0, ymax+1])
 plt.show()
 
 
-<<<<<<< HEAD
-
-#Not exercises
-
-=======
->>>>>>> origin/master
 #Also, find probability that k vertices is connected with k edges using Monte Carlo. Then in general, obtain a function,
 #called p(k). Plot it. Then come up with a forumula for p(k) by hand and write a function that computes it with that formula
 
@@ -152,7 +136,8 @@ def probability_k_vertices_connected_with_k_edges(n, k):
 	
 	return s/n
 
-#print probability_k_vertices_connected_with_k_edges(1000, 4)
+print probability_k_vertices_connected_with_k_edges(1000, 4)
+
 
 #Start at 1 on number line. Flip a coin to determine whether to go left or right.
 #Find probability that you will end up at 0 in certain number of flips
@@ -183,4 +168,4 @@ def did_reach_zero(k): #k is the number of flips
 
 	return tOrF
 
-#print average_probability_of_reaching_zero(100, 5)	
+print average_probability_of_reaching_zero(100, 5)	
