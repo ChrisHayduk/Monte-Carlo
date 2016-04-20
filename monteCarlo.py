@@ -2,9 +2,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-#March 29 Lecture Exercise
-
-#April 4 Lecture Exercise
+#Randomly add edges to a graph until it is connected
 
 def randomly_add_edges(k):	#k is the number of vertices on the graph
 	numAttempts = 0
@@ -63,7 +61,6 @@ def average_number_of_edges(n, k):	#n is the number of times to loop. K is the n
 
 	return s/n
 
-#April 5 Lecture Exercise
 
 #Let e(k) be the expected number of directed edges needed to be added to k vertices to make the graph connected.
 #Plot e(k) vs. k for k up to 50
@@ -83,8 +80,6 @@ plt.plot(xlist, ylist, 'bo--')
 plt.axis([-.1, points, 0, ymax+1])
 plt.show()
 
-
-#Not exercises
 
 #Also, find probability that k vertices is connected with k edges using Monte Carlo. Then in general, obtain a function,
 #called p(k). Plot it. Then come up with a forumula for p(k) by hand and write a function that computes it with that formula
